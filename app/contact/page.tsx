@@ -16,7 +16,7 @@ export default function Contact(){
     } else {
         return(
             <>
-            <p className="font-bold">You're not allowed to view this page!</p>
+            <p className="font-bold">You are not allowed to view this page!</p>
             <button onClick={() => signIn()} className="border rounded border-slate-900 min-w-max p-1.5">Sign in</button>
             </>
         )
