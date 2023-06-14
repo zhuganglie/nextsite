@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  @apply m-0 p-0 box-border outline-offset-0;
+}
+a {
+  @apply inline-block text-gray-900 hover:text-gray-700 focus:text-gray-700 outline-offset-2
+}
+
+h1 {
+  margin: 0 0 1.5rem 0; 
+  padding: 0; 
+  font-family: ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight:bold; 
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+h2 {
+    margin-bottom: 1.25rem ;
+    font-weight: bold; 
+    font-family: ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    padding: 0;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+h3 {
+  margin-bottom: 1.25rem ;
+  font-weight: bold; 
+  font-family: ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 0;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto; 
+}
+h4 {
+  margin-bottom: 1.25rem;
+  font-weight: bold; 
+  font-family: ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 0;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto; 
+}
+h5 {
+  margin-bottom: 1.25rem;
+  font-weight: bold; 
+  font-family: ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto; 
+}
+h6 {
+  margin-bottom: 1.25rem;
+  font-weight: bold; 
+  font-family: ubuntu, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto; 
+}
+hgroup {
+  margin: 0 0 1.25rem 0;
+  padding:0;
+}
+ul {
+    margin: 0 0 1.25rem 1.25rem;
+    list-style-type: disc; 
+    list-style-position: inside;
+}
+ol {
+  margin: 0 0 1.25rem 1.25rem;
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+dl,
+dd,
+p {
+    margin-bottom: 1.25rem;
+}
+pre {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.25rem; 
+  padding: 1.25rem;
+}
+table {
+  margin-bottom:1.25rem;
+  width: 100%;
+  font-size: medium;
+}
+blockquote {
+  margin: 0 1.25rem 1.25rem 1.25rem;
+}
+form,
+iframe,
+address {
+  margin-bottom: 1.25rem;
+}
+b,
+strong,
+dt,
+th {
+  font-weight: bold;
+}
+li {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+li > ol {
+  margin:1.25rem 0 0.5rem 1.25rem;
+}
+li > ul {
+  margin: 1.25rem 0 0.5rem 1.25rem;
+}
+li > p {
+  margin-bottom: 0.5rem;
+}
+details {
+  margin-bottom: 0.75rem;
+}
+details > summary {
+ cursor: pointer;
+ color: rgb(212 212 216);
+ background-color: rgb(39 39 42);
+ min-width: max-content;
+ padding: 0.25rem 0.5rem;
+}
+
+::-webkit-scrollbar {
+width: 2px;
+}
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #424242;
+outline: 0px solid #424242;
+}
+

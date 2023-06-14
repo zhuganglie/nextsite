@@ -1,61 +1,60 @@
 "use client"
-import { useState } from 'react';
+import React, { useState } from 'react';
+//import onClickOutside from "react-onclickoutside";
 import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
-
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
+const Header = (props) => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const links = [
+    { href: "/", text: "Home" },
+    { href: "/about", text: "About" },
+    { href: "/posts", text: "Posts" },
+    { href: "/contact", text: "Contact" },
+  ];
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  
   return (
-    <header className="bg-gray-800 text-white">
-      <nav className="flex items-center justify-between flex-wrap p-6">
-        <div className="flex items-center flex-shrink-0 mr-6">
-          <Link href="/" className="font-semibold text-xl tracking-tight">My Website
-          </Link>
-        </div>
-        <div className="block lg:hidden">
-          <button
-            className="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path
-                d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          className={`${
-            isMenuOpen ? 'block' : 'hidden'
-          } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+    <div className="bg-gray-100 text-gray-900 sticky top-0 flex items-center justify-between lg:justify-around flex-wrap p-6 w-full">
+
+      <div className="flex flex-col items-center flex-shrink-0 mr-6">
+        <Link href="/" className="font-semibold text-gray-900 text-2xl tracking-tight">
+          Easy Chinese
+        </Link>
+        <p className="m-0 text-sm">Through Micro Learning</p>
+      </div>
+
+      <div className="block lg:hidden">
+        <button
+          className="flex items-center px-3 py-2 border rounded text-gray-900 border-gray-700 hover:border-gray-900"
+          onClick={toggleMenu}
         >
-          <div className="text-sm lg:flex-grow">
-           
-            <Link href="/" className={`block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 ${pathname === '/' ? 'font-bold' : ''}`}>
-                Home
-            </Link>
-            <Link href="/about" className={`block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 ${pathname === '/about' ? 'font-bold' : ''}`}>
-                About
-            </Link>
-            <Link href="/posts" className={`block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 ${pathname === '/posts' ? 'font-bold' : ''}`}>Posts</Link>
-            <Link href="/contact" className={`block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 ${pathname === '/contact' ? 'font-bold' : ''}`}>
-                Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
-    </header>
+          <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+
+      <ul className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
+        <li className="m-0 p-0 list-none ">
+        {links.map(({ href, text }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`block mt-4 lg:inline-block lg:mt-0 text-gray-900 mr-4 ${pathname === href || pathname.includes(href + "/" ) ? "font-bold underline underline-offset-4 decoration-2" : ""}`}
+          >
+            {text}
+          </Link>
+        ))}
+        </li>
+      </ul>
+    
+    </div>
   );
 };
 
-export default Header;
 
+export default Header;

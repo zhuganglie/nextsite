@@ -3,6 +3,6 @@ const { withContentlayer } = require('next-contentlayer')
 
 module.exports = withContentlayer({
   reactStrictMode: true,
-  experimental: { appDir: false },
+  experimental: { appDir: true },
   
 })

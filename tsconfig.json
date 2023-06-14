@@ -37,7 +37,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts", 
     ".contentlayer/generated",
-    "components/layout.js", "contentlayer.config.js", "pages/posts/j[slug].js", "pages/posts/index.js", "pages/tags/index.js" ],
+    "app/layout.js", "contentlayer.config.js", "app/posts/j[slug].js", "app/posts/index.js", "app/tags/page.js", "app/tags/[slug]/page.js" ],
   "exclude": [
     "node_modules"
   ]
