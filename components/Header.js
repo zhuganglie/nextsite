@@ -23,7 +23,7 @@ const Header = (props) => {
         <Link href="/" className="font-semibold text-gray-900 text-2xl tracking-tight">
           Easy Chinese
         </Link>
-        <p className="m-0 text-sm">Through Micro Learning</p>
+        <p className="m-0 text-sm font-serif italic">Micro Learning Approach</p>
       </div>
 
       <div className="block lg:hidden">
@@ -37,7 +37,7 @@ const Header = (props) => {
           </svg>
         </button>
       </div>
-
+// use onClickOutside library to implement click outside to close 
       <ul className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
         <li className="m-0 p-0 list-none ">
         {links.map(({ href, text }) => (
