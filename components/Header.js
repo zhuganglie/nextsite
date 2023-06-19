@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState,useEffect, useRef  } from 'react';
 //import onClickOutside from "react-onclickoutside";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -27,7 +27,7 @@ const Header = (props) => {
       </div>
 
       <div className="block lg:hidden">
-        <button
+        <button 
           className="flex items-center px-3 py-2 border rounded text-gray-900 border-gray-700 hover:border-gray-900"
           onClick={toggleMenu}
         >
@@ -37,8 +37,8 @@ const Header = (props) => {
           </svg>
         </button>
       </div>
-// use onClickOutside library to implement click outside to close 
-      <ul className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
+
+      <ul  className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
         <li className="m-0 p-0 list-none ">
         {links.map(({ href, text }) => (
           <Link
@@ -51,7 +51,7 @@ const Header = (props) => {
         ))}
         </li>
       </ul>
-    
+  
     </div>
   );
 };
