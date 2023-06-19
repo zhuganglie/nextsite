@@ -14,7 +14,28 @@ const Header = (props) => {
     { href: "/contact", text: "Contact" },
   ];
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () =>{
+    console.log('toggleMenu called');
+  // setMenuOpen(!menuOpen);
+  setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+  }
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    console.log(menuRef.current);
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        console.log('click outside');
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
   
   return (
     <div className="bg-gray-100 text-gray-900 sticky top-0 flex items-center justify-between lg:justify-around flex-wrap p-6 w-full">
@@ -38,7 +59,7 @@ const Header = (props) => {
         </button>
       </div>
 
-      <ul  className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
+      <ul ref={menuRef} className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
         <li className="m-0 p-0 list-none ">
         {links.map(({ href, text }) => (
           <Link
