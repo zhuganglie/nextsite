@@ -20,6 +20,21 @@ const Header = (props) => {
   setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   }
  
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e)=>{
+      if(!menuRef.current.contains(e.target)){
+        setMenuOpen(false);
+        console.log(menuRef.current);
+      }      
+    };
+
+    document.addEventListener("mousedown", handler);
+    return() =>{
+      document.removeEventListener("mousedown", handler);
+    }
+  });
   
   return (
     <div className="bg-gray-100 text-gray-900 sticky top-0 flex items-center justify-between lg:justify-around flex-wrap p-6 w-full">
@@ -31,7 +46,7 @@ const Header = (props) => {
         <p className="m-0 text-sm font-serif italic">Micro Learning Approach</p>
       </div>
 
-      <div className="block lg:hidden">
+      <div className="block lg:hidden" >
         <button 
           className="flex items-center px-3 py-2 border rounded text-gray-900 border-gray-700 hover:border-gray-900"
           onClick={toggleMenu}
@@ -43,7 +58,7 @@ const Header = (props) => {
         </button>
       </div>
 
-      <ul className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
+      <ul ref={menuRef} className={`${menuOpen ? "block" : "hidden"} w-full lg:max-w-max flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto m-0 p-0`}>
         <li className="m-0 p-0 list-none ">
         {links.map(({ href, text }) => (
           <Link
@@ -56,7 +71,6 @@ const Header = (props) => {
         ))}
         </li>
       </ul>
-  
     </div>
   );
 };
