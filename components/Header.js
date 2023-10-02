@@ -11,7 +11,8 @@ const Header = (props) => {
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
     { href: "/posts", text: "Posts" },
-    { href: "/contact", text: "Contact" },
+    { href: "/lessons", text: "Lessons" },
+    { href: "/contact", text:"Contact" },
   ];
 
   const toggleMenu = () =>{
@@ -43,7 +44,7 @@ const Header = (props) => {
         <Link href="/" className="font-semibold text-gray-900 text-2xl tracking-tight">
           Easy Chinese
         </Link>
-        <p className="m-0 text-sm font-serif italic">Micro Learning Approach</p>
+        <p className="m-0 text-sm font-serif italic">Bite-Sized Lessons</p>
       </div>
 
       <div className="block lg:hidden" >

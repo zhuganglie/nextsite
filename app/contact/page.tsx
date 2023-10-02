@@ -1,25 +1,35 @@
-"use client"
-
-import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Contact(){
-    const { data: session } = useSession()
+  
+        return(
+        <>
+      <h2>Contact</h2>
+ 
+ 
 
-    if (session){
-        return(
-           <>
-          
-            <h2>Contact</h2>
-            <button onClick={() => signOut()} className="border rounded border-slate-900 min-w-max p-1.5">Sign out</button>
-           </>
+<div className="max-w-md mx-auto mt-10">
+  <form className="grid grid-cols-1 gap-6" onSubmit={sendEmail}>
+    <div>
+      <label className="block text-gray-700">Name</label>
+      <input type="text" className="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" />
+    </div>
+    <div>
+      <label className="block text-gray-700">Email</label>
+      <input type="email" className="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" />
+    </div>
+    <div>
+      <label className="block text-gray-700">Message</label>
+      <textarea className="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"></textarea>
+    </div>
+    <div className="text-right">
+      <button type="submit" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest bg-gray-800 hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
+        Send
+      </button>
+    </div>
+  </form>
+</div>
+
+</>
         )
-    } else {
-        return(
-            <>
-            <p className="font-bold">You are not allowed to view this page!</p>
-            <button onClick={() => signIn()} className="border rounded border-slate-900 min-w-max p-1.5">Sign in</button>
-            </>
-        )
-    }
   
 }
