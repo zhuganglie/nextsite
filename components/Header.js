@@ -20,22 +20,31 @@ const Header = (props) => {
   // setMenuOpen(!menuOpen);
   setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   }
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
  
   let menuRef = useRef();
 
   useEffect(() => {
     let handler = (e)=>{
-      if(!menuRef.current.contains(e.target)){
+      if(menuOpen && !menuRef.current.contains(e.target)){
         setMenuOpen(false);
         console.log(menuRef.current);
       }      
     };
 
-    document.addEventListener("mousedown", handler);
-    return() =>{
-      document.removeEventListener("mousedown", handler);
+    if (menuOpen) {
+      document.addEventListener("click", handler);
+    } else {
+      document.removeEventListener("click", handler);
     }
-  });
+
+    return() =>{
+      document.removeEventListener("click", handler);
+    }
+  },[menuOpen]);
   
   return (
     <div className="bg-gray-100 text-gray-900 sticky top-0 flex items-center justify-between lg:justify-around flex-wrap p-6 w-full">
@@ -66,6 +75,7 @@ const Header = (props) => {
             key={href}
             href={href}
             className={`block mt-4 lg:inline-block lg:mt-0 text-gray-900 mr-4 ${pathname === href || pathname.includes(href + "/" ) ? "font-bold underline underline-offset-4 decoration-2" : ""}`}
+            onClick={closeMenu}
           >
             {text}
           </Link>
