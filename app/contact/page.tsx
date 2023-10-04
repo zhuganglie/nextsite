@@ -1,6 +1,7 @@
 
 export default function Contact(){
   
+
         return(
         <>
       <h2>Contact</h2>
@@ -8,7 +9,7 @@ export default function Contact(){
  
 
 <div className="max-w-md mx-auto mt-10">
-  <form className="grid grid-cols-1 gap-6" onSubmit={sendEmail}>
+  <form className="grid grid-cols-1 gap-6" onSubmit={sendMail}>
     <div>
       <label className="block text-gray-700">Name</label>
       <input type="text" className="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" />
