@@ -10,8 +10,20 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password" },
       },
       authorize(credentials, req) {
-        // Perform database operations
-
+        /* Perform database operations
+        async this.authorize(credentials, req){
+          const res = await fetch("/your/endpoint", {
+            method: 'POST',
+            body: JSON.stringify(credentials),
+            headers:{"Content-Type":"application/json"}
+          })
+          const user = await res.json()
+       }
+       if(resizeBy.ok && user){
+        return user
+       }
+       return null
+       */
         if (
           credentials?.email === "admin@example.com" &&
           credentials.password === "admin"
