@@ -1,6 +1,6 @@
 {
-  "baseUrl": ".",
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -36,7 +36,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts", 
-    ".contentlayer/generated",
     "app/layout.js", "contentlayer.config.js", "app/posts/j[slug].js", "app/posts/index.js", "app/tags/page.js", "app/tags/[slug]/page.js" ],
   "exclude": [
     "node_modules"
