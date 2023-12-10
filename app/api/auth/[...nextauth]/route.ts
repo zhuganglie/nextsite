@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "@/utils/prisma";
 import { compare } from "bcrypt";
 
-export const authOptions: NextAuthOptions = {
+export const authOptions = {
   providers: [
     CredentialsProvider({
       credentials: {
@@ -21,7 +21,15 @@ export const authOptions: NextAuthOptions = {
           },
         });
         // if user doesn't exist or password doesn't match
-        if (!user || !compare(password, user.password)) {
+       /* if (!user || !compare(password, user.password)) {
+          throw new Error("Invalid username or password");
+        }
+        return user;*/
+        if (!user) {
+          throw new Error("Invalid username or password");
+        }
+        const passwordMatch = await compare(password, user.password);
+        if (!passwordMatch) {
           throw new Error("Invalid username or password");
         }
         return user;
