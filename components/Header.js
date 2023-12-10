@@ -11,7 +11,7 @@ const Header = (props) => {
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
     { href: "/posts", text: "Posts" },
-    { href: "/lessons", text: "Lessons" },
+    { href: "/protected", text: "Lessons" },
     { href: "/contact", text:"Contact" },
   ];
 

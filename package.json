@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next-auth/prisma-adapter": "^1.0.7",
     "@opentelemetry/api": "^1.4.1",
+    "@prisma/client": "^5.7.0",
     "@tailwindcss/forms": "^0.5.7",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "@vercel/postgres": "^0.5.1",
     "autoprefixer": "10.4.14",
+    "bcrypt": "^5.1.1",
     "contentlayer": "^0.3.4",
+    "crypto-js": "^4.2.0",
     "date-fns": "^2.30.0",
     "eslint": "8.42.0",
     "next": "latest",
@@ -26,6 +32,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.9.0",
     "react-onclickoutside": "^6.13.0",
     "reading-time": "^1.5.0",
@@ -37,6 +44,7 @@
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.14",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "prisma": "^5.7.0"
   }
 }

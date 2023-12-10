@@ -3,7 +3,6 @@ import { useState } from 'react';
 import './globals.css';
 import Header from '../components/Header'; // import Header component
 import Footer from '../components/Footer'; // import Footer component
-import NextAuthSessionProvider from "./providers/sessionProvider";
 
 
 const Layout = ({ children }) => {
@@ -20,9 +19,9 @@ const Layout = ({ children }) => {
      <body className="flex flex-col h-screen justify-between bg-gray-50">
      <Header />
   <main className=" flex-1 lg:w-3/5 m-auto lg:p-8">
-  <NextAuthSessionProvider>
+ 
     {children}
-    </NextAuthSessionProvider>
+  
     </main>
   <Footer />
   </body>
