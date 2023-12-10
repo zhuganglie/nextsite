@@ -13,11 +13,12 @@ export const ButtonArea = () => {
     signOut()
     router.push('/login')
   }
+
   return (
     <div className="w-full flex justify-evenly mt-5">
-      <button >{user?.email} Page</button>
+      <button className=""><span className="font-bold">Account:</span> {user?.email}</button>
       <button
-        className="border-red-500 text-red-500"
+        className="bg-gray-900 px-2.5 py-1.5 rounded text-gray-100"
         onClick={handleSignOut}
       >
         Sign out
