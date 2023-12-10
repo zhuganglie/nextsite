@@ -20,6 +20,11 @@ export const authOptions = {
             },
           });
           // if user doesn't exist or password doesn't match
+          type User = {
+            // ... other properties
+            username: string;
+            password: string;
+          };
          if (!user || !compare(password, user.password)) {
             throw new Error("Invalid username or password");
           }
