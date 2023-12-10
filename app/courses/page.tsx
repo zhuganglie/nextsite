@@ -5,12 +5,12 @@ import NextAuthSessionProvider from "@/app/providers/sessionProvider"
 import ButtonArea from '@/components/button'
 
 
-const Lessons = async () => {
+const Courses = async () => {
   const session = await getServerSession()
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <h2>Lessons</h2>
+      <h2>Courses</h2>
       {session?.user ? (
         <>
         {/* <div>Log in: {session?.user.name}</div> */}
@@ -28,4 +28,4 @@ const Lessons = async () => {
   )
 }
 
-export default Lessons
+export default Courses
