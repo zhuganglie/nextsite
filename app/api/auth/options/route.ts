@@ -6,8 +6,8 @@ export const authOptions = {
     providers: [
       CredentialsProvider({
         credentials: {
-          email: { label: "Email", type: "email" },
-          password: { label: "Password", type: "password" }
+          email: { label: "Email", type: "string" },
+          password: { label: "Password", type: "string" }
         },
         async authorize(credentials) {
           const { email, password } = credentials ?? {}
@@ -20,11 +20,7 @@ export const authOptions = {
             },
           });
           // if user doesn't exist or password doesn't match
-          type user = {
-            name: string;
-            password: string;
-          };
-         if (!user || !compare(password, user.password)) {
+          if (!user || !compare(password, user.password)) {
             throw new Error("Invalid username or password");
           }
           return user;
