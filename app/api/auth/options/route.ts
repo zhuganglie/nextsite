@@ -20,7 +20,7 @@ export const authOptions = {
             },
           });
           // if user doesn't exist or password doesn't match
-          type User = {
+          type user = {
             name: string;
             password: string;
           };
