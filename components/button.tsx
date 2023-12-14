@@ -18,7 +18,7 @@ export const ButtonArea = () => {
     <div className="w-full flex flex-col md:flex-row justify-evenly gap-2 mt-5">
       <button className=""><span className="font-bold">Account:</span> {user?.email}</button>
       <button
-        className="bg-gray-900 px-2.5 py-1.5 rounded text-gray-100"
+        className="text-gray-900 underline underline-offset-2 "
         onClick={handleSignOut}
       >
         Sign out
