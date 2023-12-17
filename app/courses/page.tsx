@@ -9,7 +9,7 @@ const Courses = async () => {
   const session = await getServerSession()
 
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <article className="flex min-h-screen flex-col items-center">
       <h2>Courses</h2>
       {session?.user ? (
         <>
@@ -24,7 +24,7 @@ const Courses = async () => {
       ) : (
         <Link href="/login" className="underline underline-offset-2 m-8">Please click to log in</Link>
       )}
-    </main>
+    </article>
   )
 }
 

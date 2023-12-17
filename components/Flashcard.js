@@ -1,0 +1,26 @@
+// components/Flashcard.js
+import { useState } from 'react';
+
+export default function Flashcard({ front, back }) {
+    const [showFront, setShowFront] = useState(true);
+
+    const flipCard = () => {
+        setShowFront(!showFront);
+    };
+
+    return (
+        <div onClick={flipCard} className="rounded border border-gray-900 w-1/2 h-[150px] flex justify-center items-center cursor-pointer" >
+            {showFront ? (
+      <div className="font-bold text-2xl">{front}</div>
+    ) : (
+      <div className="font-bold text-lg">
+        <ul>
+    <li>拼音：{back.拼音}</li>
+       <li>词义：{back.词义}</li> 
+       <li>用法：{back.用法}</li>
+        </ul>
+        </div>
+    )}
+        </div>
+    );
+}

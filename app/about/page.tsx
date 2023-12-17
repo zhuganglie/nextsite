@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-      <main>
+      <article>
         <h2>About</h2>
-      </main>
+      </article>
   );
 };
 

@@ -3,10 +3,10 @@ import ContactForm from '@/components/contact';
 
 export default function Contact() {
     return (
-      <main >
+      <article >
          <h2>Contact</h2>
         <ContactForm />
-      </main>
+      </article>
     );
   }
 

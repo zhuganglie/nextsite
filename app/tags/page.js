@@ -13,7 +13,7 @@ export default function TagsPage() {
 
   return (
     <div>
-      <h1>Unique Tags:</h1>
+      <h2>Unique Tags:</h2>
       <ul>
         {[...allTags].map(tag => (
           <li key={tag}>
