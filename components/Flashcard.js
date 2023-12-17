@@ -11,9 +11,9 @@ export default function Flashcard({ front, back }) {
     return (
         <div onClick={flipCard} className="rounded border border-gray-900 w-1/2 h-[150px] flex justify-center items-center cursor-pointer" >
             {showFront ? (
-      <div className="font-bold text-2xl">{front}</div>
+      <div className=" text-4xl">{front}</div>
     ) : (
-      <div className="font-bold text-lg">
+      <div className=" text-lg">
         <ul>
     <li>拼音：{back.拼音}</li>
        <li>词义：{back.词义}</li> 
