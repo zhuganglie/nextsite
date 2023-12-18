@@ -40,7 +40,7 @@ const Home: React.FC = () => {
 
   return (
     <article className="">
-      <div className="h-screen flex flex-col justify-center items-center">
+      <div className="h-screen flex flex-col justify-center items-center  ">
         {flashcards.length > 0 && (
           <Flashcard front={flashcards[currentCard].front} back={flashcards[currentCard].back} />
         )}
