@@ -9,7 +9,7 @@ export default function Flashcard({ front, back }) {
     };
 
     return (
-        <div onClick={flipCard} className="rounded border border-gray-900 w-1/2 h-[150px] flex justify-center items-center cursor-pointer " >
+        <div onClick={flipCard} className="rounded border border-gray-900 min-w-full lg:w-1/2 min-h-max flex justify-center items-center cursor-pointer " >
             {showFront ? (
       <div className=" text-4xl">{front}</div>
     ) : (
