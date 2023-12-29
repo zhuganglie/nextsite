@@ -39,7 +39,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <article className="">
+    <article className="p-2">
       <h2>Welcome</h2>
       <div className="flex flex-col justify-center items-center  ">
         {flashcards.length > 0 && (
