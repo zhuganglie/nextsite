@@ -45,7 +45,7 @@ const Home: React.FC = () => {
         {flashcards.length > 0 && (
           <Flashcard front={flashcards[currentCard].front} back={flashcards[currentCard].back} />
         )}
-        <button onClick={nextCard} className="my-4 rounded border border-gray-900 px-3 py-1">
+        <button onClick={nextCard} className="my-8 rounded border border-gray-900 px-4 py-1.5">
           Next
         </button>
       </div>
