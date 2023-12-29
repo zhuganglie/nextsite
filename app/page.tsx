@@ -42,7 +42,7 @@ const Home: React.FC = () => {
     <article className="p-2">
       <h2>Welcome</h2>
       <div className="flex flex-col justify-center items-center  ">
-        {flashcards.length > 0 && (
+        {flashcards.length > 5 && (
           <Flashcard front={flashcards[currentCard].front} back={flashcards[currentCard].back} />
         )}
         <button onClick={nextCard} className="my-8 rounded border border-gray-900 px-4 py-1.5">
