@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       </head>
      <body className="flex flex-col h-screen justify-between bg-gray-50">
      <Header />
-  <main className=" flex-1 lg:w-3/5 m-auto lg:p-8">
+  <main className=" flex-1 w-full lg:w-3/5 m-auto lg:p-8">
  
     {children}
   
