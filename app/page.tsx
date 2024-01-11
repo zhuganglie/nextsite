@@ -17,6 +17,8 @@ const Home: React.FC = () => {
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
+    { cards: [], currentCard: 0 },
+    
   ]);
 
   useEffect(() => {
@@ -37,6 +39,7 @@ const Home: React.FC = () => {
     fetchData('/flashcard1.json', 0);
     fetchData('/flashcard2.json', 1);
     fetchData('/flashcard3.json', 2);
+    fetchData('/flashcard4.json', 3);
   }, []);
 
   const nextCard = (index: number) => {
