@@ -71,16 +71,16 @@ const Home: React.FC = () => {
       <div className="grid gap-8 mt-8">
         {flashcards.map((flashcard, index) => (
           <div key={index}>
-            <p className="text-left m-0 text-lg">第{index + 1}课</p>
+            <p className="text-left m-0 text-lg font-bold">第{index + 1}课</p>
             {flashcard.cards.length > 0 && (
               <Flashcard front={flashcard.cards[flashcard.currentCard].front} back={flashcard.cards[flashcard.currentCard].back} />
             )}
-            <button onClick={() => nextCard(index)} className="my-6 rounded border border-gray-900 px-4 py-1.5">
-              下一个
+            <button onClick={() => prevCard(index)} className="mt-2 mb-8 rounded border border-gray-900 px-4">
+            &larr;
             </button>
             &nbsp;
-            <button onClick={() => prevCard(index)} className="my-6 rounded border border-gray-900 px-4 py-1.5">
-              上一个
+            <button onClick={() => nextCard(index)} className="mt-2 mb-8 rounded border border-gray-900 px-4">
+            &rarr;
             </button>
           </div>
         ))}
