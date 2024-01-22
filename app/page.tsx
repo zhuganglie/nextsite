@@ -54,6 +54,16 @@ const Home: React.FC = () => {
       return newFlashcards;
     });
   };
+  const prevCard = (index: number) => {
+    setFlashcards(prev => {
+      const newFlashcards = [...prev];
+      newFlashcards[index] = {
+        ...newFlashcards[index],
+        currentCard: (newFlashcards[index].currentCard - 1 + newFlashcards[index].cards.length) % newFlashcards[index].cards.length,
+      };
+      return newFlashcards;
+    });
+  };
 
   return (
     <article className="p-2">
@@ -67,6 +77,10 @@ const Home: React.FC = () => {
             )}
             <button onClick={() => nextCard(index)} className="my-6 rounded border border-gray-900 px-4 py-1.5">
               下一个
+            </button>
+            &nbsp;
+            <button onClick={() => prevCard(index)} className="my-6 rounded border border-gray-900 px-4 py-1.5">
+              上一个
             </button>
           </div>
         ))}
