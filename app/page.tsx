@@ -18,6 +18,7 @@ const Home: React.FC = () => {
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
+    { cards: [], currentCard: 0 },
     
   ]);
 
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
     fetchData('/flashcard2.json', 1);
     fetchData('/flashcard3.json', 2);
     fetchData('/flashcard4.json', 3);
+    fetchData('/flashcard5.json', 4);
   }, []);
 
   const nextCard = (index: number) => {
