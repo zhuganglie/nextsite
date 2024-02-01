@@ -15,9 +15,9 @@ export default function Flashcard({ front, back }) {
     ) : (
       <div className=" text-lg">
         <ul>
-    <li>拼音：{back.拼音}</li>
-       <li>词义：{back.词义}</li> 
-       <li>用法：{back.用法}</li>
+    <li key="pinyin">拼音：{back.拼音}</li>
+       <li key="meaning">词义：{back.词义}</li> 
+       <li key="usage">用法：{back.用法}</li>
         </ul>
         </div>
     )}
