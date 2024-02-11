@@ -9,7 +9,7 @@ const Header = (props) => {
   const pathname = usePathname();
   const links = [
     { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
+    { href: "/ai", text: "AI" },
     { href: "/posts", text: "Posts" },
     { href: "/courses", text: "Courses" },
     { href: "/contact", text:"Contact" },
