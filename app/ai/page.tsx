@@ -20,14 +20,18 @@ const AI = () => {
       ))}
  
       <form onSubmit={handleSubmit}>
-        <input
+        <textarea
           value={input}
           placeholder="Say something..."
           onChange={handleInputChange}
-          className="p-4 min-w-full border border-black"
-        />    
+          className="p-4 min-w-full border border-black mb-2"
+        />  
+        <br></br>  
+         <button type="submit" className="border rounded bg-black text-white max-w-max p-2 mr-2">Submit</button>
+         <button onClick={refreshPage} className="border rounded bg-black text-white max-w-max p-2">New chat</button>
       </form>
-      <button onClick={refreshPage} className="border rounded bg-black text-white max-w-max p-2">New chat</button>
+     
+     
     </div>
       </article>
   );
