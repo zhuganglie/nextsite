@@ -1,7 +1,7 @@
 
 
 
-const Courses = async () => {
+const Courses = () => {
 
   return (
     <article className="flex min-h-screen flex-col items-center">
