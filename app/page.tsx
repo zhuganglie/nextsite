@@ -6,12 +6,10 @@ type FlashcardType = {
   front: string;
   back: string;
 };
-
 type FlashcardData = {
   cards: FlashcardType[];
   currentCard: number;
 };
-
 const Home: React.FC = () => {
   const [flashcards, setFlashcards] = useState<FlashcardData[]>([
     { cards: [], currentCard: 0 },
@@ -20,7 +18,7 @@ const Home: React.FC = () => {
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
-      ]);
+  ]);
 
   useEffect(() => {
     const fetchData = async (url: string, index: number) => {
@@ -83,11 +81,11 @@ const Home: React.FC = () => {
               <Flashcard front={flashcard.cards[flashcard.currentCard].front} back={flashcard.cards[flashcard.currentCard].back} />
             )}
             <button onClick={() => prevCard(index)} className="mt-2 mb-8 rounded border border-gray-900 px-4">
-            &larr;
+              &larr;
             </button>
             &nbsp;
             <button onClick={() => nextCard(index)} className="mt-2 mb-8 rounded border border-gray-900 px-4">
-            &rarr;
+              &rarr;
             </button>
           </div>
         ))}
@@ -95,5 +93,5 @@ const Home: React.FC = () => {
     </article>
   );
 };
-
 export default Home;
+
