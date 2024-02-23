@@ -18,6 +18,8 @@ const Home: React.FC = () => {
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
     { cards: [], currentCard: 0 },
+    { cards: [], currentCard: 0 },
+    { cards: [], currentCard: 0 },
   ]);
 
   useEffect(() => {
@@ -43,6 +45,8 @@ const Home: React.FC = () => {
         '/flashcard4.json',
         '/flashcard5.json',
         '/flashcard6.json',
+        '/flashcard7.json',
+        '/flashcard8.json',
       ];
 
       const fetchPromises = urls.map((url, index) => fetchData(url, index));
@@ -73,7 +77,7 @@ const Home: React.FC = () => {
   return (
     <article className="p-2">
       <h2>Flashcards</h2>
-      <div className="grid gap-8 mt-8">
+      <div className="grid gap-2 mt-8">
         {flashcards.map((flashcard, index) => (
           <div key={index}>
             <p className="text-left m-0 text-lg font-bold">第{index + 1}课</p>
