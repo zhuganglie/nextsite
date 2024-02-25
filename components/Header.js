@@ -8,10 +8,10 @@ const Header = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const links = [
-    { href: "/", text: "Home" },
-    { href: "/ai", text: "AI" },
-    { href: "/posts", text: "Posts" },
+    { href: "/", text: "Vocabulary" },
+    { href: "/posts", text: "Articles" },
     { href: "/courses", text: "Courses" },
+    { href: "/ai", text: "AI" },
     { href: "/contact", text:"Contact" },
   ];
 
