@@ -1,5 +1,7 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "github.gitAuthentication": true
+  "github.gitAuthentication": true,
+  "workbench.colorTheme": "Default Light Modern",
+  "window.autoDetectColorScheme": true
 }

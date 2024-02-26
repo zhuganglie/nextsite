@@ -1,3 +1,4 @@
+
 "use client"
 import { useEffect, useState } from 'react';
 import Flashcard from '../components/Flashcard';
@@ -11,16 +12,7 @@ type FlashcardData = {
   currentCard: number;
 };
 const Home: React.FC = () => {
-  const [flashcards, setFlashcards] = useState<FlashcardData[]>([
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-    { cards: [], currentCard: 0 },
-  ]);
+  const [flashcards, setFlashcards] = useState<FlashcardData[]>(Array(8).fill({ cards: [], currentCard: 0 }));
 
   useEffect(() => {
     const fetchData = async (url: string, index: number) => {
@@ -38,17 +30,7 @@ const Home: React.FC = () => {
     };
 
     const fetchAllData = async () => {
-      const urls = [
-        '/flashcard1.json',
-        '/flashcard2.json',
-        '/flashcard3.json',
-        '/flashcard4.json',
-        '/flashcard5.json',
-        '/flashcard6.json',
-        '/flashcard7.json',
-        '/flashcard8.json',
-      ];
-
+      const urls = Array.from({ length: 8 }, (_, i) => `/flashcard${i + 1}.json`);
       const fetchPromises = urls.map((url, index) => fetchData(url, index));
       await Promise.all(fetchPromises);
     };
@@ -56,13 +38,17 @@ const Home: React.FC = () => {
     fetchAllData();
   }, []);
 
-  const nextCard = (index: number) => {
+  const updateCard = (index: number, offset: number) => {
     setFlashcards(prev => {
       const newFlashcards = [...prev];
-      const currentCard = (newFlashcards[index].currentCard + 1) % newFlashcards[index].cards.length;
+      const currentCard = (newFlashcards[index].currentCard + offset + newFlashcards[index].cards.length) % newFlashcards[index].cards.length;
       newFlashcards[index] = { ...newFlashcards[index], currentCard };
       return newFlashcards;
     });
+  };
+
+  const nextCard = (index: number) => {
+    updateCard(index, 1);
   };
 
   const prevCard = (index: number) => {
@@ -98,4 +84,3 @@ const Home: React.FC = () => {
   );
 };
 export default Home;
-
