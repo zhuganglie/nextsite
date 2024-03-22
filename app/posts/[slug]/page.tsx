@@ -1,5 +1,4 @@
 
-
 import { Post, allPosts } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import { Metadata } from "next";

@@ -12,7 +12,7 @@ type FlashcardData = {
   currentCard: number;
 };
 const Home: React.FC = () => {
-  const [flashcards, setFlashcards] = useState<FlashcardData[]>(Array(20).fill({ cards: [], currentCard: 0 }));
+  const [flashcards, setFlashcards] = useState<FlashcardData[]>(Array(30).fill({ cards: [], currentCard: 0 }));
 
   useEffect(() => {
     const fetchData = async (url: string, index: number) => {
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
     };
 
     const fetchAllData = async () => {
-      const urls = Array.from({ length: 20 }, (_, i) => `/flashcard${i + 1}.json`);
+      const urls = Array.from({ length: 30 }, (_, i) => `/flashcard${i + 1}.json`);
       const fetchPromises = urls.map((url, index) => fetchData(url, index));
       await Promise.all(fetchPromises);
     };
