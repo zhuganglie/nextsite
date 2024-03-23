@@ -1,0 +1,242 @@
+[
+    {
+        "front": "显示",
+        "back": {
+            "拼音": "xiǎn shì",
+            "词义": "to display, to show",
+            "用法": "这个屏幕可以显示多种颜色。"
+        }
+    },
+    {
+        "front": "透露",
+        "back": {
+            "拼音": "tòu lù",
+            "词义": "to reveal, to disclose",
+            "用法": "他并没有透露这次会议的具体内容。"
+        }
+    },
+    {
+        "front": "表达",
+        "back": {
+            "拼音": "biǎo dá",
+            "词义": "to express, to convey",
+            "用法": "他通过音乐来表达自己的感情。"
+        }
+    },
+    {
+        "front": "揭示",
+        "back": {
+            "拼音": "jiē shì",
+            "词义": "to reveal, to unveil",
+            "用法": "这项研究揭示了新的科学事实。"
+        }
+    },
+    {
+        "front": "一模一样",
+        "back": {
+            "拼音": "yī mú yī yàng",
+            "词义": "exactly alike, identical",
+            "用法": "这两个双胞胎看起来一模一样。"
+        }
+    },
+    {
+        "front": "截然不同",
+        "back": {
+            "拼音": "jié rán bù tóng",
+            "词义": "completely different, totally distinct",
+            "用法": "他们两个人的性格截然不同。"
+        }
+    },
+    {
+        "front": "大同小异",
+        "back": {
+            "拼音": "dà tóng xiǎo yì",
+            "词义": "largely similar but with minor differences",
+            "用法": "这两种方法大同小异。"
+        }
+    },
+    {
+        "front": "形同虚设",
+        "back": {
+            "拼音": "xíng tóng xū shè",
+            "词义": "in name only, nominally",
+            "用法": "这些规则形同虚设，没有人遵守。"
+        }
+    },
+    {
+        "front": "就算",
+        "back": {
+            "拼音": "jiù suàn",
+            "词义": "even if, granted that",
+            "用法": "就算下雨，我们也要去爬山。"
+        }
+    },
+    {
+        "front": "即使",
+        "back": {
+            "拼音": "jí shǐ",
+            "词义": "even if, even though",
+            "用法": "即使困难重重，我们也不会放弃。"
+        }
+    },
+    {
+        "front": "固然",
+        "back": {
+            "拼音": "gù rán",
+            "词义": "admittedly, it is true",
+            "用法": "固然有风险，但这次机会不容错过。"
+        }
+    },
+    {
+        "front": "尽管",
+        "back": {
+            "拼音": "jǐn guǎn",
+            "词义": "despite, although",
+            "用法": "尽管外面很冷，他还是决定出门跑步。"
+        }
+    },
+    {
+        "front": "品头论足",
+        "back": {
+            "拼音": "pǐn tóu lùn zú",
+            "词义": "to be overly critical, to find fault with everything",
+            "用法": "她总是品头论足，让人感到不舒服。"
+        }
+    },
+    {
+        "front": "津津乐道",
+        "back": {
+            "拼音": "jīn jīn lè dào",
+            "词义": "to talk about something with great interest",
+            "用法": "他对科学总是津津乐道。"
+        }
+    },
+    {
+        "front": "情有独钟",
+        "back": {
+            "拼音": "qíng yǒu dú zhōng",
+            "词义": "to have a special fondness for",
+            "用法": "他对音乐情有独钟。"
+        }
+    },
+    {
+        "front": "兴致勃勃",
+        "back": {
+            "拼音": "xìng zhì bó bó",
+            "词义": "in high spirits",
+            "用法": "孩子们兴致勃勃地去动物园。"
+        }
+    },
+    {
+        "front": "青睐",
+        "back": {
+            "拼音": "qīng lài",
+            "词义": "favor",
+            "用法": "这个新产品很受消费者青睐。"
+        }
+    },
+    {
+        "front": "忽视",
+        "back": {
+            "拼音": "hū shì",
+            "词义": "to neglect",
+            "用法": "我们不应该忽视环境保护。"
+        }
+    },
+    {
+        "front": "质疑",
+        "back": {
+            "拼音": "zhì yí",
+            "词义": "to question",
+            "用法": "专家们对这个理论提出了质疑。"
+        }
+    },
+    {
+        "front": "嘲笑",
+        "back": {
+            "拼音": "cháo xiào",
+            "词义": "to mock",
+            "用法": "他因为失败而被别人嘲笑。"
+        }
+    },
+    {
+        "front": "宽心",
+        "back": {
+            "拼音": "kuān xīn",
+            "词义": "to feel relieved",
+            "用法": "听到这个好消息，我们都宽心了。"
+        }
+    },
+    {
+        "front": "宽容",
+        "back": {
+            "拼音": "kuān róng",
+            "词义": "tolerant",
+            "用法": "他对别人的错误总是持宽容态度。"
+        }
+    },
+    {
+        "front": "计较",
+        "back": {
+            "拼音": "jì jiào",
+            "词义": "to haggle over; to fuss about",
+            "用法": "他总是为小事计较。"
+        }
+    },
+    {
+        "front": "计算",
+        "back": {
+            "拼音": "jì suàn",
+            "词义": "to calculate; to compute",
+            "用法": "他正在计算这个月的开销。"
+        }
+    },
+    {
+        "front": "完胜",
+        "back": {
+            "拼音": "wán shèng",
+            "词义": "complete victory; to win outright",
+            "用法": "他在比赛中完胜对手。"
+        }
+    },
+    {
+        "front": "战胜",
+        "back": {
+            "拼音": "zhàn shèng",
+            "词义": "to defeat; to overcome",
+            "用法": "我们必须战胜困难。"
+        }
+    },
+    {
+        "front": "悔恨",
+        "back": {
+            "拼音": "huǐ hèn",
+            "词义": "to regret; remorse",
+            "用法": "他对自己的错误深感悔恨。"
+        }
+    },
+    {
+        "front": "怨恨",
+        "back": {
+            "拼音": "yuàn hèn",
+            "词义": "to resent; bitterness",
+            "用法": "他对那次失败怀有怨恨。"
+        }
+    },
+    {
+        "front": "收到",
+        "back": {
+            "拼音": "shōu dào",
+            "词义": "to receive",
+            "用法": "我已经收到你的信了。"
+        }
+    },
+    {
+        "front": "收获",
+        "back": {
+            "拼音": "shōu huò",
+            "词义": "harvest; to reap",
+            "用法": "农民们正在忙着收获庄稼。"
+        }
+    }
+]
