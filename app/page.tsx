@@ -66,7 +66,7 @@ const Home: React.FC = () => {
       <div className="grid gap-2 mt-8">
         {flashcards.map((flashcard, index) => (
           <div key={index}>
-            <p className="text-left m-0 text-lg font-bold">第{index + 1}课</p>
+            <p className="text-left m-0 text-lg font-bold">第{index + 1}单元</p>
             {flashcard.cards.length > 0 && (
               <Flashcard front={flashcard.cards[flashcard.currentCard].front} back={flashcard.cards[flashcard.currentCard].back} />
             )}
