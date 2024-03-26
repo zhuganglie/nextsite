@@ -6,6 +6,8 @@ import { getMDXComponent } from "next-contentlayer/hooks";
 import Link from "next/link";
 import { TbTag, TbArrowBack } from "react-icons/tb";
 
+
+
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
@@ -50,7 +52,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   ))}
   </ul>
           <article>
-            <MDXContent />
+             <MDXContent />
             <hr />
         <Link href="/posts" className="mt-4 flex items-center gap-x-1"><span>All Posts</span><TbArrowBack /></Link>
           </article>
