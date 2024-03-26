@@ -1,14 +1,14 @@
 
 
 
-const Courses = () => {
+const Intermediate = () => {
 
   return (
     <article className="flex min-h-screen flex-col items-center">
-      <h2>Courses</h2>
+      <h2>Intermediate</h2>
       <p>This page is under construction ... </p>
     </article>
   )
 }
 
-export default Courses
+export default Intermediate
