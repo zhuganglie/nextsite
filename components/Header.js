@@ -10,7 +10,7 @@ const Header = (props) => {
   const links = [
     { href: "/", text: "Vocabulary" },
     { href: "/posts", text: "Articles" },
-    { href: "/ai", text: "AI" },
+   // { href: "/ai", text: "Ai" },
     { href: "/contact", text: "Contact" },
   ];
 
