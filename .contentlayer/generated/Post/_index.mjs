@@ -2,12 +2,12 @@
 
 import howToLearnMandarinMdx from './how-to-learn-mandarin.mdx.json' assert { type: 'json' }
 import hyperholeMdx from './hyperhole.mdx.json' assert { type: 'json' }
+import learningPointArgumentativeMdx from './learning-point-argumentative.mdx.json' assert { type: 'json' }
+import learningPointExpositoryMdx from './learning-point-expository.mdx.json' assert { type: 'json' }
 import learningPointJixuwenMdx from './learning-point-jixuwen.mdx.json' assert { type: 'json' }
 import metaphorMdx from './metaphor.mdx.json' assert { type: 'json' }
 import parallelismMdx from './parallelism.mdx.json' assert { type: 'json' }
 import personificationMdx from './personification.mdx.json' assert { type: 'json' }
 import springMdx from './spring.mdx.json' assert { type: 'json' }
-import learningPointArgumentativeMdx from './learning-point-argumentative.mdx.json' assert { type: 'json' }
-import learningPointExpositoryMdx from './learning-point-expository.mdx.json' assert { type: 'json' }
 
-export const allPosts = [howToLearnMandarinMdx, hyperholeMdx, learningPointJixuwenMdx, metaphorMdx, parallelismMdx, personificationMdx, springMdx, learningPointArgumentativeMdx, learningPointExpositoryMdx]
+export const allPosts = [howToLearnMandarinMdx, hyperholeMdx, learningPointArgumentativeMdx, learningPointExpositoryMdx, learningPointJixuwenMdx, metaphorMdx, parallelismMdx, personificationMdx, springMdx]
