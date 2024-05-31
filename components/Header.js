@@ -8,7 +8,7 @@ const Header = (props) => {
   const pathname = usePathname();
 
   const links = [
-    { href: "/", text: "Vocabulary" },
+    { href: "/", text: "Home" },
     { href: "/posts", text: "Articles" },
     { href: "/ai", text: "Ai" },
     { href: "/contact", text: "Contact" },
@@ -93,36 +93,36 @@ const Header = (props) => {
           <div className="relative inline-block">
             <button
               className={`block mt-4 lg:inline-block lg:mt-0 text-gray-900 mr-4 ${
-                pathname === "/courses" || pathname.includes("/courses/")
+                pathname === "/vocabulary" || pathname.includes("/vocabulary/")
                   ? "font-bold underline underline-offset-4 decoration-2"
                   : ""
               }`}
               onClick={toggleCoursesMenu}
             >
-              Courses
+              Vocabulary
             </button>
             {coursesOpen && (
               <div className="md:absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
                 <Link
-                  href="/courses/beginner"
+                  href="/vocabulary/beginner"
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                   onClick={closeMenu}
                 >
-                  Beginner
+                  PLSE
                 </Link>
                 <Link
-                  href="/courses/intermediate"
+                  href="/vocabulary/intermediate"
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                   onClick={closeMenu}
                 >
-                  Intermediate
+                  O Level
                 </Link>
                 <Link
-                  href="/courses/advanced"
+                  href="/vocabulary/advanced"
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                   onClick={closeMenu}
                 >
-                  Advanced
+                  A Level
                 </Link>
               </div>
             )}

@@ -41,11 +41,11 @@ const AI = () => {
               adjustTextareaHeight(e.target);
             }}
             style={{ height: textareaHeight }}
-            className="p-4 min-w-full border border-black mb-2"
+            className="p-4 min-w-full border border-gray-500 mb-2"
           />
           <br />
-          <button type="submit" className="border rounded bg-black text-white max-w-max p-2 mr-2">Submit</button>
-          <button type="button" onClick={refreshPage} className="border rounded bg-black text-white max-w-max p-2">New chat</button>
+          <button type="submit" className="border rounded bg-gray-500 hover:bg-gray-700 text-white max-w-max p-2 mr-2">Submit</button>
+          <button type="button" onClick={refreshPage} className="border rounded bg-gray-500 hover:bg-gray-700 text-white max-w-max p-2">New Chat</button>
         </form>
       </div>
     </article>
