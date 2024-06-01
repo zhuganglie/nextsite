@@ -24,7 +24,10 @@ const Flashcard = ({ list }) => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1) % flashcards.length);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? flashcards.length - 1 : prevIndex - 1
+    );
+    //setCurrentIndex((prevIndex) => (prevIndex - 1) % flashcards.length);
     setShowBack(false);
   };
 
