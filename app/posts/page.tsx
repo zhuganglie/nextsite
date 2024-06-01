@@ -42,7 +42,7 @@ function page() {
 
   return (
     <div className="w-full h-full flex flex-col">    
-    <h1>Posts</h1>
+    <h1>Lessons</h1>
         <div className="w-full h-fit overflow-auto space-y-10 flex flex-col xl:px-48 px-10 pt-20">
           {posts.map((post, idx) => (
             <PostCard key={idx} {...post} />

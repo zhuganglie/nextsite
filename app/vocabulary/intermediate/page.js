@@ -9,7 +9,7 @@ export default function Intermediate() {
 
   return (
     <div className="flex flex-col p-4">
-      <h2>O-Level Vocabulary</h2>
+      <h1>O-Level Vocabulary</h1>
       <Flashcard flashcards={flashcards1} />
       <Flashcard flashcards={flashcards2} />
     </div>

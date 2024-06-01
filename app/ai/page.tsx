@@ -23,7 +23,7 @@ const AI = () => {
 
   return (
     <article className="p-2">
-      <h2>Chat</h2>
+      <h1>AI Tutor</h1>
       <div className="grid gap-4">
         {messages.map((m) => (
           <div key={m.id}>
