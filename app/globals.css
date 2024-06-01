@@ -135,8 +135,9 @@ details {
 }
 details > summary {
  cursor: pointer;
- color: rgb(212 212 216);
- background-color: rgb(39 39 42);
+ width: 200px;
+ color: black;
+ background-color: #eeeeee;
  min-width: max-content;
  padding: 0.25rem 0.5rem;
 }

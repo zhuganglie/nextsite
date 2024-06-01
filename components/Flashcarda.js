@@ -49,10 +49,10 @@ const Flashcard = ({ list }) => {
         >
           {showBack ? (
             <ul className="text-left">
-              <li className="text-gray-700 text-lg"><strong>拼音：</strong>{back.拼音}</li>
-              <li className="text-gray-700 text-lg"><strong>词义：</strong>{back.词义}</li>
-              <li className="text-gray-700 text-lg"><strong>英文：</strong>{back.英文}</li>
-              <li className="text-gray-700 text-lg mt-2"><strong>例句：</strong>{back.例句}</li>
+              <li key="pinyin" className="text-gray-700 text-lg"><strong>拼音：</strong>{back.拼音}</li>
+              <li key="meaning" className="text-gray-700 text-lg"><strong>词义：</strong>{back.词义}</li>
+              <li key="english" className="text-gray-700 text-lg"><strong>英文：</strong>{back.英文}</li>
+              <li key="example" className="text-gray-700 text-lg mt-2"><strong>例句：</strong>{back.例句}</li>
             </ul>
           ) : (
             <div>

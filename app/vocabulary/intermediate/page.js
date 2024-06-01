@@ -19,20 +19,23 @@ export default function Intermediate() {
    ]
 
   return (
-    <div className="flex flex-col p-4">
+    <div className="flex flex-col gap-4 p-4">
       <h1>O-Level Vocabulary</h1>
-      <div>
-      <h2>Sec One</h2>
+
+      <details>
+      <summary className="font-bold text-lg">Sec 1</summary>
       {flashcard1Units.map((flashcards, index) => (
-        <Flashcard key={index} flashcards={flashcards} />
+        <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
       ))}
-      </div>
-      <div>
-      <h2>Sec Two</h2>
+      </details>
+
+      <details>
+      <summary className="font-bold text-lg">Sec 2</summary>
       {flashcard2Units.map((flashcards, index) => (
-        <Flashcard key={index} flashcards={flashcards} />
+        <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
       ))}
-      </div>
+
+    </details>
     </div>
   );
 }
