@@ -15,7 +15,28 @@ export default function Intermediate() {
 
    const flashcard2Units =[
     vocabularyData.s2.u1,
+    vocabularyData.s2.u2,
+    vocabularyData.s2.u3,
+    vocabularyData.s2.u4,
+    vocabularyData.s2.u5,
+    vocabularyData.s2.u6,
+   ]
 
+   const flashcard3Units =[
+    vocabularyData.s3.u1,
+    vocabularyData.s3.u2,
+    vocabularyData.s3.u3,
+    vocabularyData.s3.u4,
+    vocabularyData.s3.u5,
+    vocabularyData.s3.u6,
+   ]
+
+   const flashcard4Units =[
+    vocabularyData.s4.u1,
+    vocabularyData.s4.u2,
+    vocabularyData.s4.u3,
+    vocabularyData.s4.u4,
+    vocabularyData.s4.u5,
    ]
 
   return (
@@ -36,6 +57,24 @@ export default function Intermediate() {
       ))}
 
     </details>
+
+    <details>
+      <summary className="font-bold text-lg">Sec 3</summary>
+      {flashcard3Units.map((flashcards, index) => (
+        <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
+      ))}
+
+    </details>
+
+    <details>
+      <summary className="font-bold text-lg">Sec 4</summary>
+      {flashcard4Units.map((flashcards, index) => (
+        <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
+      ))}
+
+    </details>
     </div>
+
+
   );
 }
