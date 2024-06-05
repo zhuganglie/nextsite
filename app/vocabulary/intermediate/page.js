@@ -44,14 +44,14 @@ export default function Intermediate() {
       <h1>O-Level Vocabulary</h1>
 
       <details>
-      <summary className="font-bold text-lg">Sec 1</summary>
+      <summary className="font-bold text-lg">中一词语</summary>
       {flashcard1Units.map((flashcards, index) => (
         <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
       ))}
       </details>
 
       <details>
-      <summary className="font-bold text-lg">Sec 2</summary>
+      <summary className="font-bold text-lg">中二词语</summary>
       {flashcard2Units.map((flashcards, index) => (
         <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
       ))}
@@ -59,7 +59,7 @@ export default function Intermediate() {
     </details>
 
     <details>
-      <summary className="font-bold text-lg">Sec 3</summary>
+      <summary className="font-bold text-lg">中三词语</summary>
       {flashcard3Units.map((flashcards, index) => (
         <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
       ))}
@@ -67,7 +67,7 @@ export default function Intermediate() {
     </details>
 
     <details>
-      <summary className="font-bold text-lg">Sec 4</summary>
+      <summary className="font-bold text-lg">中四词语</summary>
       {flashcard4Units.map((flashcards, index) => (
         <details className="mt-2"><summary>第 {index +1} 单元</summary><Flashcard key={index} flashcards={flashcards} /></details>
       ))}
