@@ -6,6 +6,7 @@ export default function Advance() {
       <h1>H1 Vocabulary</h1>
       <Flashcard list="v1" />
       <Flashcard list="v2" />
+      <Flashcard list="v3" />
     </div>
   );
 }
