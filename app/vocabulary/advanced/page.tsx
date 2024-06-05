@@ -7,6 +7,7 @@ export default function Advance() {
       <Flashcard list="v1" />
       <Flashcard list="v2" />
       <Flashcard list="v3" />
+      <Flashcard list="v4" />
     </div>
   );
 }
