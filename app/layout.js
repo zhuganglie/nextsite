@@ -1,4 +1,5 @@
 "use client"
+import { SessionProvider } from "next-auth/react";
 import { useState } from 'react';
 import './globals.css';
 import Header from '../components/Header'; // import Header component
@@ -8,6 +9,7 @@ import Footer from '../components/Footer'; // import Footer component
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);
   return (
+    <SessionProvider>
     <html lang="en">
       {
       }
@@ -26,6 +28,7 @@ const Layout = ({ children }) => {
   <Footer />
   </body>
   </html>
+  </SessionProvider>
   )
 }
 export default Layout;
