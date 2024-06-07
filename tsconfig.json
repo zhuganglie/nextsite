@@ -36,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts", 
-    "app/layout.js", "contentlayer.config.js", "app/posts/j[slug].js", "app/posts/index.js", "app/tags/page.js", "app/tags/[slug]/page.js", "components/Flashcard.tsx", "app/vocabulary/intermediate/page.js" ],
+    "app/layout.js", "contentlayer.config.js", "app/posts/j[slug].js", "app/posts/index.js", "app/tags/page.js", "app/tags/[slug]/page.js", "components/Flashcard.tsx", "app/vocabulary/intermediate/page.js", "components/login.js", "middleware.js", "app/auth/signin.js" ],
   "exclude": [
     "node_modules"
   ]

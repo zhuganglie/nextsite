@@ -13,7 +13,7 @@
     "@google/generative-ai": "^0.2.1",
     "@next-auth/prisma-adapter": "^1.0.7",
     "@opentelemetry/api": "^1.4.1",
-    "@prisma/client": "^5.7.0",
+    "@prisma/client": "^5.15.0",
     "@tailwindcss/forms": "^0.5.7",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "20.3.1",
@@ -28,8 +28,8 @@
     "crypto-js": "^4.2.0",
     "date-fns": "^2.30.0",
     "eslint": "8.42.0",
-    "next": "latest",
-    "next-auth": "latest",
+    "next": "^14.2.3",
+    "next-auth": "^4.24.7",
     "next-contentlayer": "^0.3.4",
     "nodemailer": "^6.9.7",
     "postcss": "^8.4.38",
@@ -50,6 +50,6 @@
   "devDependencies": {
     "@types/nodemailer": "^6.4.14",
     "eslint-config-next": "latest",
-    "prisma": "^5.7.0"
+    "prisma": "^5.15.0"
   }
 }
