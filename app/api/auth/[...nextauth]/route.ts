@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 
 
-export default NextAuth({
+const handler = NextAuth({
   providers: [
     EmailProvider({
         server: process.env.EMAIL_SERVER,
@@ -25,3 +25,5 @@ export default NextAuth({
     verifyRequest: '/auth/verify-request',
     newUser: '/auth/new-user',
   },})
+
+  export { handler as GET, handler as POST}
