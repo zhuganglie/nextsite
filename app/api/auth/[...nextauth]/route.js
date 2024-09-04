@@ -1,6 +1,10 @@
 import NextAuth from "next-auth";                         
 import CredentialsProvider from "next-auth/providers/credentials";                        
-                                                           
+import { NextResponse } from 'next/server';
+import jwt from 'jsonwebtoken';
+
+const JWT_SECRET = 'your_jwt_secret'; // Replace with your actual secret
+
 export const authOptions = {
     providers: [
         CredentialsProvider({
@@ -10,11 +14,15 @@ export const authOptions = {
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                // Replace this with your own logic to find the user
-                const user = { id: 1, name: "User", email: "user@example.com" };
-                
-                if (credentials.username === "user" && credentials.password === "password") {
-                    return user;
+                const res = await fetch('http://localhost:3000/auth/login', { // Adjust the URL as needed
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: credentials.username, password: credentials.password })
+                });
+                const user = await res.json();
+
+                if (res.ok && user.token) {
+                    return { id: user.user.id, name: user.user.username, token: user.token };
                 } else {
                     return null;
                 }
@@ -31,11 +39,13 @@ export const authOptions = {
         async jwt({ token, user }) {
             if (user) {
                 token.id = user.id;
+                token.token = user.token;
             }
             return token;
         },
         async session({ session, token }) {
             session.user.id = token.id;
+            session.user.token = token.token;
             return session;
         }
     }
