@@ -1,24 +1,27 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useChat } from 'ai/react'; 
 
 const AI = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
   const [textareaHeight, setTextareaHeight] = useState("auto");
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const refreshPage = () => {
     window.location.reload();
   };
 
   // Adjust textarea height based on its content
-  const adjustTextareaHeight = (input: any) => {
-    // Assuming a base height of 20px for empty content
-    setTextareaHeight(`${Math.max(input.scrollHeight, 20)}px`);
+  const adjustTextareaHeight = () => {
+    if (textareaRef.current) {
+      // Assuming a base height of 20px for empty content
+      setTextareaHeight(`${Math.max(textareaRef.current.scrollHeight, 20)}px`);
+    }
   };
 
   useEffect(() => {
-    adjustTextareaHeight(document.getElementById('myTextarea'));
+    adjustTextareaHeight();
   }, [input]);
 
   return (
@@ -33,12 +36,12 @@ const AI = () => {
         ))}
         <form onSubmit={handleSubmit}>
           <textarea
-            id="myTextarea"
+            ref={textareaRef}
             value={input}
             placeholder="Say something..."
             onChange={(e) => {
               handleInputChange(e);
-              adjustTextareaHeight(e.target);
+              adjustTextareaHeight();
             }}
             style={{ height: textareaHeight }}
             className="p-4 min-w-full border border-gray-500 mb-2"
